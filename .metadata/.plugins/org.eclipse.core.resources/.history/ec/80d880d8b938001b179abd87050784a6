@@ -1,0 +1,33 @@
+package banco;
+
+public class Cliente{
+	
+	private int[] numCliente = {12345, 54321, 77777, 00000};
+	private int[] nip = {11111, 22222, 12345, 00000};
+	private String usuario;
+	private int contrasena;
+
+	public Cliente(int cliente, int pass) {
+		usuario = cliente;
+		contrasena = pass;
+	}
+	
+	public String getUsuario() {
+		return usuario;
+	}
+	
+	private int verificacion(int[] numCliente) {
+		for(int i = 0; i < numCliente.length; i++) {
+			if (numCliente[i] == usuario) {
+					return "Bienvenido Cliente: " + getUsuario() ;
+				}
+			}
+		return "El usuario y/o contraseña no coinciden";
+		}	
+	
+	
+	@Override
+	public String toString() {
+		return verificacion(numCliente);
+	}
+}

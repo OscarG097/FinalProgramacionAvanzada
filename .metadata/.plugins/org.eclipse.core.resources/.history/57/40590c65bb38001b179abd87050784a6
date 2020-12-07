@@ -1,0 +1,35 @@
+package banco;
+
+public class Cliente{
+	
+	static final int[] numCliente = {12345, 54321, 77777, 00000};
+	static final int[] nip = {11111, 22222, 12345, 00000};
+	private int usuario;
+	private int contrasena;
+
+	public Cliente(int cliente, int pass) {
+		usuario = cliente;
+		contrasena = pass;
+	}
+	
+	public int getUsuario() {
+		return usuario;
+	}
+	
+	private String verificacion() {
+		for(int i = 0; i < numCliente.length; i++) {
+			if (numCliente[i] == usuario) {
+					if(nip[i] == contrasena) {
+						return "BIENVENIDO CLIENTE N°, " + usuario;
+					}
+				}
+			}
+		return "El usuario es incorrecto";
+		}	
+	
+	
+	@Override
+	public String toString() {
+		return verificacion();
+	}
+}
