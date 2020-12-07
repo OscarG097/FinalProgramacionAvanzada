@@ -21,10 +21,10 @@ public class ClienteLogin{
 					return "Los datos no coinciden (Contraseña)";
 					}
 				}else{
-					i = i;
+					return "Los datons no coinciden (Usuario)";
 				}
 			}
-		return "Los datos son incorrectos";
+		return "0";
 		}		
 	
 	
