@@ -1,0 +1,35 @@
+package banco;
+
+public class ClienteLogin{
+	
+	static final String[] numCliente = {"12345", "54321", "77777", "00000"};
+	static final int[] nip = {11111, 22222, 12345, 00000};
+	private String usuario;
+	private int contrasena;
+
+	public ClienteLogin(String cliente, int pass) {
+		usuario = cliente;
+		contrasena = pass;
+	}
+	
+	private String verificacion() {
+		for(int i = 0; i < numCliente.length; i++) {
+			if (numCliente[i] == usuario) {
+				if(nip[i] == contrasena) {
+					return "BIENVENIDO CLIENTE, " + usuario;
+					}else{
+					return "Los datos no coinciden (Contraseña)";
+					}
+				}else{
+					return "Los datos son incorrectos (Usuario)";
+				}
+			}
+		return "0";
+		}	
+	
+	
+	@Override
+	public String toString() {
+		return verificacion();
+	}
+}

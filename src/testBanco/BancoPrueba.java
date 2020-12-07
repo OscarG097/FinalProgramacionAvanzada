@@ -1,6 +1,6 @@
 package testBanco;
 
-import banco.Cliente;
+import banco.ClienteLogin;
 import java.util.Scanner;
 
 public class BancoPrueba {
@@ -11,11 +11,12 @@ public class BancoPrueba {
 	Scanner input = new Scanner(System.in);
 	System.out.println("¡BIENVENIDO!" + "\nIngrese su número de cuenta:");
 	//Ingresa Cuenta y valor en el constructor
-	String user = input.nextLine();
+	//String user = input.nextLine();
+	int user = input.nextInt();
 	System.out.println("Introduzca su NIP:");
 	//Ingresa NIP y pone valor en el cosntructor
 	int contr = input.nextInt();
-	Cliente cliente1 = new Cliente(user, contr);
+	ClienteLogin cliente1 = new ClienteLogin(user, contr);
 	System.out.println(cliente1);
 
 	
