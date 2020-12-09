@@ -18,6 +18,8 @@ public class BancoPrueba {
 	int contr = input.nextInt();
 	ClienteLogin cliente1 = new ClienteLogin(user, contr);
 	System.out.println(cliente1);
+	
+	
 
 	}
 }

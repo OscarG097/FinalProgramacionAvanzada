@@ -11,27 +11,23 @@ public class ClienteLogin{
 		usuario = cliente;
 		contrasena = pass;
 	}
-	private int verificacion() {
+	
+	private String verificacion() {
 		for(int i = 0; i < numCliente.length; i++) {
 			if (numCliente[i] == usuario) {
 				if(nip[i] == contrasena) {
-					return 1;
+					return "BIENVENIDO CLIENTE, " + usuario + ".";
 				}else{
-					return 0;
+					return "Los datos no coinciden.";
 					}
 				}else{
 					i = i;
 				}
 			}
-		return 0;
+		return "Los datos son incorrectos.";
 		}		
 	@Override
 	public String toString() {
-        if (verificacion() == 0){
-            return "Los datos ingresados son incorrectos.";
-        }else{
-		return "Bienvenido clliente, " + usuario + "." + "\n------------------------\n----ELIJA UNA OPCION----\n-1.- Solicitud de saldo-"
-				+ "\n-2.- Retiro de dinero---\n-3.- Depósito de dinero-\n------------------------";
-        }
+		return verificacion();
 	}
 }

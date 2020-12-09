@@ -11,6 +11,26 @@ public class ClienteLogin{
 		usuario = cliente;
 		contrasena = pass;
 	}
+	
+	/*private String verificacion() {
+		for(int i = 0; i < numCliente.length; i++) {
+			if (numCliente[i] == usuario) {
+				if(nip[i] == contrasena) {
+					return "BIENVENIDO CLIENTE, " + usuario + ".";
+				}else{
+					return "Los datos no coinciden.";
+					}
+				}else{
+					i = i;
+				}
+			}
+		return "Los datos son incorrectos.";
+		}		
+	@Override
+	public String toString() {
+		return verificacion() + "\n-------------------------\n----ELIJA UNA OPCION----\n-1.- Solicitud de saldo-"
+				+ "\n-2.- Retiro de dinero---\n-3.- Depósito de dinero-\n-------------------------";
+	}*/
 	private int verificacion() {
 		for(int i = 0; i < numCliente.length; i++) {
 			if (numCliente[i] == usuario) {
@@ -32,6 +52,7 @@ public class ClienteLogin{
         }else{
 		return "Bienvenido clliente, " + usuario + "." + "\n------------------------\n----ELIJA UNA OPCION----\n-1.- Solicitud de saldo-"
 				+ "\n-2.- Retiro de dinero---\n-3.- Depósito de dinero-\n------------------------";
+
         }
 	}
 }

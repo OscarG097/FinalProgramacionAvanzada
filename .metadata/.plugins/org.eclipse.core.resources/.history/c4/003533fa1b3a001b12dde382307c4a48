@@ -11,7 +11,7 @@ public class BancoPrueba {
 	//Logeo del cliente, ingresa cuenta y nip
 	Scanner input = new Scanner(System.in);
 	System.out.println("¡BIENVENIDO!" + "\nIngrese su número de cuenta:");
-	//Ingresa Cuenta y pone valor en el constructor
+	//Ingresa Cuenta y PONE valor en el constructor
 	int user = input.nextInt();
 	System.out.println("Introduzca su NIP:");
 	//Ingresa NIP y pone valor en el cosntructor
