@@ -72,6 +72,12 @@ public class ABM{
 				
 				System.out.println("Puede retirar dinero" + "\nLe quedan :"+ sal);
 				
+				/*for(int i = 0; i < clientes.length; i++) {
+					
+							clientes[i].setSaldo(sal);
+							// hay q ver la manera de q se guarde lo q se retira
+					
+				}*/
 				
 			}else {
 				//System.out.println("No puede retirar dinero el monton ingresado es mayor a lo que dispone en cuenta");
@@ -90,6 +96,10 @@ public class ABM{
 			operacion=opera;
 			if(verificacion() == 1) {
 				switch(opera) {
+				case 0:
+					System.out.println("Bienvenido cliente, " + usuario + "." + "\n------------------------\n----ELIJA UNA OPCION----\n-1.- Solicitud de saldo-"
+					+ "\n-2.- Retiro de dinero-\n-3.- Depósito de dinero-\n-4.- Salir del sistema-\n------------------------");
+					break;
 				case 1:
 					System.out.println("Su saldo es :"+sal);
 					break;
@@ -108,14 +118,14 @@ public class ABM{
 				//System.out.println("Gracias por operar con nosotros,hasta luego");
 					return "Gracias por operar con nosotros,hasta luego";
 			default :
-				if (operacion <0 & operacion >4) {
+				if (operacion < 0 & operacion >4) {
 					System.out.println("Numero de operacion incorrecto");
 				}
 					
 			}
 			
 			}
-			return "\nDesea hacer alguna otra operacion?";
+			return  "Opcion elegida :"+opera+":";
 			//return false;
 		}
 		
