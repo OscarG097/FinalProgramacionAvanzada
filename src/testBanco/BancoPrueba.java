@@ -11,7 +11,7 @@ public class BancoPrueba {
 	public static void main(String[] args) {
 	
 		Cuentas c1 = new Cuentas(12345,12345,40000);
-		Cuentas c2 = new Cuentas(4567,4567,45000);
+		Cuentas c2 = new Cuentas(45678,45678,45000);
 		
 		//Logeo del cliente, ingresa cuenta y nip
 		Scanner input = new Scanner(System.in);
@@ -53,7 +53,7 @@ public class BancoPrueba {
 			int deposito=input.nextInt();
 			System.out.println(cliente1.depositoDinero(deposito));
 		}
-		System.out.println("Quiere realizar otra consulta?");	
+		System.out.println("¿Quiere realizar otra consulta?");	
 		System.out.println("Si la respuesta es si, presione 0 para volver al menu o 4 para salir");
 		
 		 opcion=input.nextInt();
@@ -66,15 +66,15 @@ public class BancoPrueba {
 			 opcion=4;
 		 }
 			
-		}
+		}/*
 		System.out.println("--------------------------------------------------------");
 		
-	/*Cuentas c1= new Cuentas(123456,12345,45000);	
+	Cuentas c1= new Cuentas(123456,12345,45000);	
 	c1.setSaldo(45000);
 		
 	//--> CLIENTE LOGIN <--//
 	//Logeo del cliente, ingresa cuenta y nip
-	Scanner input = new Scanner(System.in);
+	/*Scanner input = new Scanner(System.in);
 	System.out.println("¡BIENVENIDO!" + "\nIngrese su número de cuenta:");
 	//Ingresa Cuenta y pone valor en el constructor
 	int user = input.nextInt();
@@ -83,8 +83,7 @@ public class BancoPrueba {
 	int contr = input.nextInt();
 	ClienteLogin cliente1 = new ClienteLogin(user, contr);
 	System.out.println(cliente1);
-	
-	*/
 
+	}*/
 	}
 }
