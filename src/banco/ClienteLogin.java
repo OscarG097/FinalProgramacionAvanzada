@@ -4,7 +4,7 @@ public class ClienteLogin {
 	
 	static final int[] numCliente = {12345, 54321, 77777, 00000};
 	static final int[] nip = {11111, 22222, 12345, 00000};
-	private double [] saldo = {30.00, 150.00, 300.00, 200.50}; 
+	private double[] saldo = {30.00, 150.00, 300.00, 200.50}; 
 	private double saldoUsuario = 1.0;
 	private int usuario;
 	private int contrasena;
@@ -29,6 +29,7 @@ public class ClienteLogin {
 			}
 		return 0;
 		}	
+	
 	public double getSaldo() {
 		return saldoUsuario;
 	}
