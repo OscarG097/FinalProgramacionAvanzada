@@ -1,7 +1,6 @@
 package testBanco;
 
 import banco.ATM;
-import banco.ClienteLogin;
 import banco.Cuentas;
 
 import java.util.Scanner;
@@ -18,6 +17,7 @@ public class BancoPrueba {
 		Scanner input = new Scanner(System.in);
 		
 		int opcion=4;
+		
 		while(opcion == 4) { /// while para retomar el ingreso de cuenta cuando un usuario sale y entra uno nuevo
 		System.out.println("¡BIENVENIDO!" + "\nIngrese su número de cuenta:");
 		//Ingresa Cuenta y pone valor en el constructor

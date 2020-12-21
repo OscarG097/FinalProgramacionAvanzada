@@ -78,6 +78,7 @@ public class ATM {
 			}else {
 				return "No puede retirar dinero, el monto ingresado es mayor a lo que dispone en cuenta";	
 			}
+			//Se setea a cero porque sino en un segundo pedido sigue restando el monto que se solicitó antes 
 			this.retiro=0;
 			retiro=0;
 			return "Gracias!";
@@ -108,6 +109,5 @@ public class ATM {
 			}
 		}
 			return  "Opcion elegida: " + opera;
-			//return false;
 	}
 }
