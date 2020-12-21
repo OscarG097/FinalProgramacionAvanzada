@@ -10,6 +10,7 @@ public class BancoPrueba {
 	
 	public static void main(String[] args) {
 	
+		//Creacion de clientes para tener en la base de datos
 		Cuentas c1 = new Cuentas(12345, 12345, 40000);
 		Cuentas c2 = new Cuentas(45678, 45678, 45000);
 		
@@ -17,7 +18,7 @@ public class BancoPrueba {
 		Scanner input = new Scanner(System.in);
 		
 		int opcion=4;
-		while(opcion == 4) { /// while para retomar el ingreso de cuenta
+		while(opcion == 4) { /// while para retomar el ingreso de cuenta cuando un usuario sale y entra uno nuevo
 		System.out.println("¡BIENVENIDO!" + "\nIngrese su número de cuenta:");
 		//Ingresa Cuenta y pone valor en el constructor
 		int user = input.nextInt();

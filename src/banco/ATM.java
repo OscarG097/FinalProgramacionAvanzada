@@ -51,8 +51,13 @@ public class ATM {
 	  public String depositoDinero(double deposito) {
 			this.deposito=deposito;
 			if(deposito >0) {
-				sal = sal+deposito;
+				sal = sal+deposito;				
 				System.out.println("Su dinero en cuenta es: $" + sal);
+				
+				for(Cuentas clientes:clientes) {
+					clientes.setSaldo(sal);
+				}
+				
 			}else {
 				return "Tiene que ingresar un numero mayor a 0";
 			}
@@ -61,24 +66,20 @@ public class ATM {
 		
 		public String retiroDinero(double retiro) {
 			this.retiro=retiro;
-			if(retiro < sal && retiro < limite) {
+			if(retiro < sal && retiro <= limite) {
 				sal-=retiro;			
 				limite -= retiro;
 				System.out.println("Puede retirar dinero" + "\nLe quedan :"+ sal + "\nQueda en caja: " + limite);
 				
-				for(int i = 0; i < clientes.length; i++) {
-					if (clientes[i].getUsuario() == usuario) {
-						
-						clientes[i].setSaldo(sal);
-							
-						}
-				
-				}	
-				
-				// Hay q ver la manera de q se guarde lo q se retira			
+				for(Cuentas clientes:clientes) {
+					clientes.setSaldo(sal);
+				}
+					
 			}else {
 				return "No puede retirar dinero, el monto ingresado es mayor a lo que dispone en cuenta";	
 			}
+			this.retiro=0;
+			retiro=0;
 			return "Gracias!";
 		}
 		public String operaciones(int opera) {
