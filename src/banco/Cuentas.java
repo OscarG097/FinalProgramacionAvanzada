@@ -6,7 +6,7 @@ public class Cuentas {
 	private int nip;
 	private int usuario;
 	private int contrasena;
-	public double saldo;
+	private double saldo;
 	
 	
 	public Cuentas(int numCliente,int nip,double saldo) {

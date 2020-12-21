@@ -15,6 +15,9 @@ public class BancoPrueba {
 		
 		//Logeo del cliente, ingresa cuenta y nip
 		Scanner input = new Scanner(System.in);
+		
+		int opcion=4;
+		while(opcion == 4) { /// while para retomar el ingreso de cuenta
 		System.out.println("¡BIENVENIDO!" + "\nIngrese su número de cuenta:");
 		//Ingresa Cuenta y pone valor en el constructor
 		int user = input.nextInt();
@@ -29,7 +32,7 @@ public class BancoPrueba {
 		
 		//Ingresar opcion 
 		System.out.println("Ingrese el numero de su seleccion:");
-		int opcion=input.nextInt();
+		opcion=input.nextInt();
 		
 		while(opcion != 4) {
 			if(opcion != 2 & opcion !=3){
@@ -55,6 +58,9 @@ public class BancoPrueba {
 		 }else {
 			 opcion=4;
 	 }	
+		
    }
+		}	
+	
   }
 }

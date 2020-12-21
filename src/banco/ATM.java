@@ -1,5 +1,5 @@
 package banco;
-//Lucas rompio todo
+
 public class ATM {
 
 	private Cuentas[] clientes;
@@ -65,6 +65,16 @@ public class ATM {
 				sal-=retiro;			
 				limite -= retiro;
 				System.out.println("Puede retirar dinero" + "\nLe quedan :"+ sal + "\nQueda en caja: " + limite);
+				
+				for(int i = 0; i < clientes.length; i++) {
+					if (clientes[i].getUsuario() == usuario) {
+						
+						clientes[i].setSaldo(sal);
+							
+						}
+				
+				}	
+				
 				// Hay q ver la manera de q se guarde lo q se retira			
 			}else {
 				return "No puede retirar dinero, el monto ingresado es mayor a lo que dispone en cuenta";	
